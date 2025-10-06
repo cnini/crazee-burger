@@ -1,5 +1,4 @@
 import {
-  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router";
@@ -10,14 +9,12 @@ import ErrorPage from "./components/pages/ErrorPage";
 
 function App() {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<LoginPage />} />
-                <Route path="order/:name" element={<OrderPage />} />
+        <Routes>
+            <Route path="/" element={<LoginPage />} />
+            <Route path="order/:name" element={<OrderPage />} />
 
-                <Route path="*" element={<ErrorPage />} />
-            </Routes>
-        </Router>
+            <Route path="*" element={<ErrorPage />} />
+        </Routes>
     )
 }
 
